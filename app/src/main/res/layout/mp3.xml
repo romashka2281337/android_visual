@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <!-- Новая горизонтальная группа для отображения времени и полосы прогресса -->
+
+    <TextView
+        android:id="@+id/track_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="название"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <!-- Текущие секунды воспроизведения -->
+        <TextView
+            android:id="@+id/time_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:text="0"
+            android:textSize="16sp" />
+
+        <!-- Полоска прогресса занимает основную ширину -->
+        <SeekBar
+            android:id="@+id/sb_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp"
+            android:max="100"/>
+
+        <!-- Всего секунд трека -->
+        <TextView
+            android:id="@+id/time_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:text="/ 0"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- Элементы управления -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prev"/>
+
+    <CheckBox
+        android:id="@+id/cb_cycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:checked="false"
+        android:text="Repeat"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:baselineAligned="false"
+        android:text="Volume" />
+
+    <SeekBar
+        android:id="@+id/sb_volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:max="90"/>
+
+</LinearLayout>
