@@ -21,12 +21,17 @@ class Mennu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
+
         findViewById<Button>(R.id.button_calculator).setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
         findViewById<Button>(R.id.button_mp3_player).setOnClickListener {
             checkAudioPermission()
+        }
+
+        findViewById<Button>(R.id.button_gps_tracker).setOnClickListener {
+            startActivity(Intent(this, GpsTrackerActivity::class.java))
         }
     }
 

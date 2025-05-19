@@ -21,7 +21,6 @@ class Mp3PlayerActivity : AppCompatActivity() {
     private var volumeLevel = 0
     private var handler = Handler(Looper.getMainLooper())
 
-    // Текстовые поля для времени
     private lateinit var timeCurrent: TextView
     private lateinit var timeTotal: TextView
 
@@ -42,7 +41,6 @@ class Mp3PlayerActivity : AppCompatActivity() {
         val sbProgress = findViewById<SeekBar>(R.id.sb_progress)
         val sbVolume = findViewById<SeekBar>(R.id.sb_volume)
 
-        // Получаем ссылки на текстовые поля
         timeCurrent = findViewById(R.id.time_current)
         timeTotal = findViewById(R.id.time_total)
 
@@ -98,7 +96,6 @@ class Mp3PlayerActivity : AppCompatActivity() {
         mediaPlayer = MediaPlayer.create(this, songIds[currentSongIndex])
         updateTrackInfo()
 
-        // Авто-переключение на следующий трек при окончании текущего
         mediaPlayer.setOnCompletionListener {
             nextTrack()
         }
@@ -150,11 +147,10 @@ class Mp3PlayerActivity : AppCompatActivity() {
         val trackTitleView = findViewById<TextView>(R.id.track_title)
         trackTitleView.text = resources.getResourceEntryName(songIds[currentSongIndex])
 
-        // Определяем общую длительность трека в секундах
+
         val durationSec = mediaPlayer.duration / 1000
         timeTotal.text = "/ $durationSec"
 
-        // Максимальное значение для полоски прогресса
         val sbProgress = findViewById<SeekBar>(R.id.sb_progress)
         sbProgress.max = mediaPlayer.duration
     }
@@ -195,4 +191,3 @@ class Mp3PlayerActivity : AppCompatActivity() {
 }
 
 
-//исправлен баг

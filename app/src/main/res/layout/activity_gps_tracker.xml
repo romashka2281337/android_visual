@@ -3,23 +3,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     android:gravity="center">
 
-    <Button
-        android:id="@+id/button_calculator"
+    <TextView
+        android:id="@+id/tvLatitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculator" />
+        android:text="Широта: -"
+        android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/button_gps_tracker"
+    <TextView
+        android:id="@+id/tvLongitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="GPS Трекер" />
-    <Button
-        android:id="@+id/button_mp3_player"
+        android:text="Долгота: -"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MP3 Player" />
+        android:layout_marginTop="16dp"
+        android:text="Время: -"
+        android:textSize="18sp" />
+
+
 </LinearLayout>
